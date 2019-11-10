@@ -1,8 +1,8 @@
-namespace bug {
+namespace noclasses {
     type ErrorMessage = string;
-    type AccountCode = string;
-    type UserName = string;
- 
+    type AccountCode = string & { readonly _sym: unique symbol};
+    type UserName = string & { readonly _sym: unique symbol};
+    
     const validateUserName = (userName: UserName): true | ErrorMessage => {
         if (userName.match(/^[a-z]+$/) === null) return `user name must be l/c: [${userName}]`;
         return true;
@@ -19,7 +19,7 @@ namespace bug {
         msg = validateUserName(accountCode);
         if (msg !== true) throw msg;
     }
-    export const goodName: UserName = 'bob';
-    export const goodCode: AccountCode = 'A1234';
-    validateDetails(goodName, goodCode); // what bug makes this throw an exception ???
+    export const goodName: UserName = 'bob' as UserName;
+    export const goodCode: AccountCode = 'A1234' as AccountCode;
+    validateDetails(goodName, goodCode);
 }
