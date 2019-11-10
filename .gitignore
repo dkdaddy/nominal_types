@@ -1,0 +1,5 @@
+java/*.class
+cs/bin
+cs/obj
+ts/*.js
+cpp/a.out
