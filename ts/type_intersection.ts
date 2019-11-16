@@ -2,13 +2,10 @@ namespace type_intersection {
 
     type Computer = {cpu: string, cores: number};
     type Heater = {watts: number};
-
     type HotComputer = Computer & Heater;
-
     type ComputerOrHeater = Computer | Heater;
 
     let myDesktopPC: HotComputer;
-
     let box: ComputerOrHeater;
 
     myDesktopPC = {cpu:'Intel', cores:4};
@@ -17,7 +14,6 @@ namespace type_intersection {
 
     box = {cpu:'Intel', cores:4};
     box = {watts: 600};
-
     box = myDesktopPC;    
 
     // Union types of intrinic types can be created but they are disjoint sets

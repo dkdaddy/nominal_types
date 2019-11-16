@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+        body {
+            font-family: 'Droid Serif';
+            color: orange;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Arial';
+            font-weight: normal;
+            line-height: 100%;
+            color: orange;
+        }
+
+        /* h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; } */
+        .remark-slide-content {
+            font-size: 24px;
+            line-height: 150%;
+            background-color: black;
+        }
+
+        .remark-code,
+        .remark-inline-code {
+            font-family: 'Ubuntu Mono';
+        }
+
+        img {
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+
+# Nominal Types in TypeScript
+---
+
+## Here is some code
+
+<img src="bug.png" width="97%" />
+
+### Can you spot the bug?
+### Is the IDE helping?
+---
+### In Java I would create classes 
+
+<img src="java.png" width="100%" />
+
+<img src="javac.png" width="75%" />
+---
+### I can do the same thing in C# #
+
+<img src="csharp.png" width="90%" />
+
+<img src="csharp_error.png" width="70%" />
+
+---
+### and C++
+
+<img src="cpp.png" width="97%" />
+
+---
+### but what about TypeScript ?
+
+<img src="tsclasses.png" width="97%" />
+
+<img src="tsc.png" width="66%" />
+
+#### no error
+---
+### Why no error ?
+
+### TypeScript is Structurally Typed 
+
+```js
+type Thing1 = {
+    x: number;
+    y: number;
+}
+```
+is the same type as
+```js
+type Thing2 = {
+    x: number;
+    y: number;
+}
+```
+---
+## We can solve this using Symbols and Type Intersections
+---
+## Symbols
+
+blah
+blah
+blah
+---
+<img src="symbol_use.png" width="97%" />
+
+Read more at https://codeburst.io/a-practical-guide-to-es6-symbol-3fc90117c7ac
+
+---
+## Type Intersections
+
+blah
+blah
+blah
+---
+
+<img src="type_intersection.png" width="97%" />
+
+Read more at https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types
+
+---
+### Using this technique
+
+<img src="symbol.png" width="105%" />
+
+---
+### Even Simpler
+
+<img src="noclasses.png" width="110%" />
+
+---
+## Read this book
+<img src="boris.jpg" width="40%" />
+---
+
+Find the code and this presentation at https://github.com/ypescriptbob/nominal_types
+
+or on twitter @typescriptbob
+
+
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"> </script>
+    <script> var slideshow = remark.create(); </script>
+</body>
+
+</html>

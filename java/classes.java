@@ -2,15 +2,11 @@ import java.util.regex.*;
 
 class AccountCode {
     String _stringValue;
-    AccountCode(String s) {
-        _stringValue = s;
-    }
+    AccountCode(String s) { _stringValue = s;}
 };
 class UserName {
     String _stringValue;
-    UserName(String s) {
-         _stringValue = s;
-    }
+    UserName(String s) { _stringValue = s;}
 };
 class Validation {
     static String validateUserName(UserName userName) {
