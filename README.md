@@ -19,9 +19,9 @@ No Error!
 
 I can use Symbol and type intersections.
 
-What are Type Intersections?
+What are Type Intersections? [type_intersections.ts](./ts/type_intersections.ts)
 
-What are Symbols?
+What are Symbols? [symbol_use.ts](./ts/symbol_use.ts)
 
 Using these techniques we have [symbol.ts](./ts/symbol.ts)
 
