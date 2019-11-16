@@ -19,7 +19,7 @@ No Error!
 
 I can use Symbol and type intersections.
 
-What are Type Intersections? [type_intersections.ts](./ts/type_intersections.ts)
+What are Type Intersections? [type_intersection.ts](./ts/type_intersection.ts)
 
 What are Symbols? [symbol_use.ts](./ts/symbol_use.ts)
 
