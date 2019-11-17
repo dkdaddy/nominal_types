@@ -11,7 +11,8 @@
 
         body {
             font-family: 'Droid Serif';
-            color: orange;
+            color:white;
+            
         }
 
         h1,
@@ -20,7 +21,7 @@
             font-family: 'Arial';
             font-weight: normal;
             line-height: 100%;
-            color: orange;
+            color: greenyellow;
         }
 
         /* h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; } */
@@ -44,46 +45,65 @@
 
 <body>
     <textarea id="source">
+class: center, middle
 
 # Nominal Types in TypeScript
+## Bob Cook ( @typescriptbob )
 ---
 
 ## Here is some code
 
-<img src="bug.png" width="97%" />
+<img src="bug.png" width="90%" />
 
-### Can you spot the bug?
-### Is the IDE helping?
+--
+
+#### Can you spot the bug?
+--
+
+#### Is the IDE helping?
 ---
+
 ### In Java I would create classes 
+--
 
 <img src="java.png" width="100%" />
+--
 
 <img src="javac.png" width="75%" />
 ---
 ### I can do the same thing in C# #
+--
 
 <img src="csharp.png" width="90%" />
+--
 
 <img src="csharp_error.png" width="70%" />
 
 ---
 ### and C++
+--
 
 <img src="cpp.png" width="97%" />
+--
 
+Note how vs.code highlights the error for us here
 ---
 ### but what about TypeScript ?
+--
 
 <img src="tsclasses.png" width="97%" />
+--
 
 <img src="tsc.png" width="66%" />
+--
 
 #### no error
 ---
-### Why no error ?
+### Why is there no error in the TypeScript code ?
+--
 
 TypeScript is structurally typed 
+--
 
 ```js
 type Thing1 = {
@@ -91,7 +111,11 @@ type Thing1 = {
     y: number;
 }
 ```
+--
+
 is the same type as
+--
+
 ```js
 type Thing2 = {
     x: number;
@@ -101,51 +125,76 @@ type Thing2 = {
 ---
 We can solve this problem 
 using 
-Symbols 
-and 
-Type Intersections
----
-## Symbols
+--
 
-blah
-blah
-blah
+### Symbols 
+--
+
+and 
+
+--
+### Intersection Types
 ---
+## What are Symbols ?
+
+--
+
+A Symbol is a special type of javascript object
+
+--
+
 <img src="symbol_use.png" width="97%" />
 
+--
 Read more at https://codeburst.io/a-practical-guide-to-es6-symbol-3fc90117c7ac
 
 ---
-## Type Intersections
+## What are Intersection Types ?
 
-blah
-blah
-blah
+--
+<img src="venn.png" width="60%" />
+
+--
+
+The intersection of Computer and Heater is HotComputer
+
+--
+but the intersection of String and Number is the empty set {}
 ---
 
 <img src="type_intersection.png" width="97%" />
 
 Read more at https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types
 ---
-<img src="venn.png" width="90%" />
----
+
 ### Using this technique
 
+--
+We intersect each of our types with a Symbol
+
+--
 <img src="symbol.png" width="105%" />
 
----
-### Even Simpler
+--
+Note how we need to use a type assertion to create the object instances
 
+---
+### We can make this even simpler
+
+--
 <img src="noclasses.png" width="110%" />
+
+--
+Now our code is very similar to the original
 
 ---
 Read this book
 
 <img src="boris.jpg" width="40%" />
 
-Find the code and this presentation at https://github.com/typescriptbob/nominal_types
+Find the code and this presentation source at https://github.com/typescriptbob/nominal_types
 
-or follow me on twitter @typescriptbob
+Live presentation at https://typescriptbob.com/nominal_types
 
 
 </textarea>
