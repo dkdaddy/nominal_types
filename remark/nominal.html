@@ -11,8 +11,8 @@
 
         body {
             font-family: 'Droid Serif';
-            color:white;
-            
+            color: white;
+
         }
 
         h1,
@@ -34,6 +34,11 @@
         .remark-code,
         .remark-inline-code {
             font-family: 'Ubuntu Mono';
+            background-color:darkslategrey;
+        }
+
+        a {
+            color: lightblue;
         }
 
         img {
@@ -58,6 +63,13 @@ class: center, middle
 --
 
 #### Can you spot the bug?
+
+???
+
+We alias AccountCode and UserName to string
+
+In line 19 we accidently pass accountCode instead of UserName
+
 --
 
 #### Is the IDE helping?
@@ -192,7 +204,11 @@ Read this book
 
 <img src="boris.jpg" width="40%" />
 
+--
+
 Find the code and this presentation source at https://github.com/typescriptbob/nominal_types
+
+--
 
 Live presentation at https://typescriptbob.com/nominal_types
 
