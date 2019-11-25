@@ -1,5 +1,9 @@
 # nominal_types
-How to simulate nominal types in TypeScript
+## How to simulate nominal types in TypeScript
+
+This is the repo for a talk I gave at Bloomberg in November 2019. You can step though the talk [here](http://typescriptbob.com/nominal_types/remark/nominal.html)
+
+## Overview
 
 Consider the code in [bug.ts](./ts/bug.ts) 
 
